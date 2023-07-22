@@ -20,7 +20,7 @@ app.get('/api/notes', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-app.post('/api/notes', (req, res) => {
+app.post('/api/notes', async (req, res) => {
   const { title, text } = req.body;
 
   if(req.body) {
@@ -30,7 +30,7 @@ app.post('/api/notes', (req, res) => {
       id: nanoid()
     };
     readAndAppend(newNote, './db/db.json');
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+    await readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
   } 
   else {
     res.error('Error in adding note');
