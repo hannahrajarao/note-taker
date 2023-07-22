@@ -9,3 +9,6 @@ How to use:
 Go to [link](https://fierce-savannah-24652-077a9203eac8.herokuapp.com/)   
 Click + in navigation bar to start a new note  
 After entering note title and text, hit the save icon to save the note. Note will show up on the left column, and will reappear upon reload  
+
+![homepage](public/assets/images/homepage.png)
+![note taking](public/assets/images/notes.png)
